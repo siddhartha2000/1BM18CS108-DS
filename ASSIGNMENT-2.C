@@ -1,22 +1,21 @@
 #include<stdio.h>
 #include<conio.h>
-
 void swap(int *,int *);
 void main()
 {
-	int num1,num2;
+	int a,b;
 	clrscr();
 	printf("\n Enter the numbers to be swapped:");
-	scanf("%d %d",&num1,&num2);
-	printf("\n Before swap: \nNum1:%d, Num2:%d",num1,num2);
-	swap(&num1,&num2);
-	printf("\n The Swapped numbers now are:\nNum1:%d, Num2:%d",num1,num2);
+	scanf("%d%d",&a,&b);
+	printf("\n The numbers before swap are: \nNumber1:%d, Number2:%d",a,b);
+	swap(&a,&b);
+	printf("\n The Swapped numbers  are:\nNumber1:%d, Number2:%d",a,b);
 	getch();
 }
-void swap(int *num0,int *num01)
+void swap(int *x,int *y)
 {
-	int num02;
-	num02=*num0;
-	*num0=*num01;
-	*num01=num02;
+	int flag;
+	flag=*x;
+	*x=*y;
+	*y=flag;
 }
